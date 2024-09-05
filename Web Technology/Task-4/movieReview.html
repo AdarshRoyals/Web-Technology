@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .container img{
+            margin-left: 19%;
+            padding-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #fafafa;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 98%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Devara Movie Review</h1>
+        <img src="./Devara.jpeg" alt="" height="300px" width="500px">
+        <br>
+        <form id="registration-form" action="/submit-registration" method="POST">
+            <fieldset>
+                
+                <label for="first-name">Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="rating">Rating</label>
+                <select id="rating" name="rating">
+                    <option value="">--Rate It--</option>
+                    <option value="1-star">*</option>
+                    <option value="2-star">* *</option>
+                    <option value="3-star">* * *</option>
+                    <option value="4-star">* * * *</option>
+                    <option value="5-star">* * * * *</option>
+                </select>
+                <label for="review">Write More About Your Movie</label>
+                <textarea id="review" name="review" rows="5"></textarea>
+
+                <label for="positives">Positives</label>
+                <textarea id="positives" name="positives" rows="5"></textarea>
+
+                <label for="negatives">Negatives</label>
+                <textarea id="negatives" name="negatives" rows="5"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Submit</legend>
+                <button type="submit">Submit Review</button>
+            </fieldset>
+</body>
+</html>
